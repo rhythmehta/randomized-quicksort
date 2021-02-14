@@ -79,12 +79,16 @@ print(timeit.timeit(randomized_quicksort, number=1))
 
 # ## Question 2.
 # 
-# What are the main differences between the `randomized_quicksort` in the code and $RANDOMIZED-QUICKSORT$ in Cormen et al., besides that the partition of `randomized_quicksort` uses a median of 3 as a pivot?
+# What are the main differences between the `randomized_quicksort` in the code and $RANDOMIZED-QUICKSORT$ in Cormen et al., besides that the partition of
+# `randomized_quicksort` uses a median of 3 as a pivot?
 
-# Cormen uses recursive calls to the funct randmized-quicksort where he uses a base case function to check before calling in the recursion part. While in the code there is usage of loop than recursion. Also, in the code we shuffle the input which Cormen takes the input as in the given order.
+# Cormen uses recursive calls to the funct randmized-quicksort where he uses a base case function to check before calling in the recursion part. While in the code 
+# there is usage of loop than recursion. Also, in the code we shuffle the input which Cormen takes the input as in the given order.
 
 # ## Question 3.
-# What is the time complexity of this `randomized_qsort`? Time the algorithm on lists of various lengths, each list being a list of the first $n$ consecutive positive integers. Produce a graph with list lengths on the x axis and running time on the y axis. As always, don’t forget to time the algorithm several times for each list’s length and then average the results. 
+# What is the time complexity of this `randomized_qsort`? Time the algorithm on lists of various lengths, each list being a list of the first $n$ consecutive 
+# positive integers. Produce a graph with list lengths on the x axis and running time on the y axis. As always, don’t forget to time the algorithm several times
+# for each list’s length and then average the results. 
 
 # In[5]:
 
@@ -260,7 +264,6 @@ plt.show()
 
 # In[13]:
 
-
 def qsort(lst): 
     indices = [(0, len(lst))]
 
@@ -275,7 +278,6 @@ def qsort(lst):
         values = [lst[ind] for ind in inds]
         partition = lst[0]
         
-
         # Split into lists:
         lower = [a for a in lst[frm:to] if a < partition]
         upper = [a for a in lst[frm:to] if a > partition]
@@ -295,10 +297,7 @@ def qsort(lst):
     return lst
     raise NotImplementedError()
 
-
 # In[14]:
-
 
 assert(qsort([4,2,1])==[1,2,4])
 assert(qsort([0])==[0])
-
