@@ -1,15 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Part A. Median-of-3 partitioning quicksort 
-# 
-# ## Question 1.
-# 
-# Read through the following Python code. What does each function (i.e., median, qsort, randomized_qsort, test_qsort) do? Comment in details each function. 
-# 
-
-# In[2]:
-
+# ## Part A. Median-of-3 partitioning quicksort
 
 import timeit
 import random
@@ -77,8 +69,6 @@ test_quicksort()
 print(timeit.timeit(randomized_quicksort, number=1))
 
 
-# ## Question 2.
-# 
 # What are the main differences between the `randomized_quicksort` in the code and $RANDOMIZED-QUICKSORT$ in Cormen et al., besides that the partition of
 # `randomized_quicksort` uses a median of 3 as a pivot?
 
@@ -90,7 +80,6 @@ print(timeit.timeit(randomized_quicksort, number=1))
 # positive integers. Produce a graph with list lengths on the x axis and running time on the y axis. As always, don’t forget to time the algorithm several times
 # for each list’s length and then average the results. 
 
-# In[5]:
 
 
 import time
@@ -118,14 +107,9 @@ plt.legend()
 plt.show()
 
 
-# ## Question 4.
-# 
-# ### Question 4a.
+# ### Question
 # 
 # Change the `qsort()` function in a way that you **don’t** separate the items that are equal to the partition. 
-# 
-
-# In[6]:
 
 
 def qsort(lst):
@@ -168,9 +152,6 @@ def qsort(lst):
     return lst
 
 
-# In[7]:
-
-
 assert(qsort([4,2,1])==[1,2,4])
 assert(qsort([0])==[0])
 
@@ -178,8 +159,6 @@ assert(qsort([0])==[0])
 # ### Question 4b.
 # 
 # Now time the algorithm on the same inputs you have used in question 3, adding one more line in the previous graph you have produced. 
-
-# In[12]:
 
 
 def qsort2(lst):
