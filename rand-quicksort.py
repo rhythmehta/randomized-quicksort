@@ -80,8 +80,6 @@ print(timeit.timeit(randomized_quicksort, number=1))
 # positive integers. Produce a graph with list lengths on the x axis and running time on the y axis. As always, don’t forget to time the algorithm several times
 # for each list’s length and then average the results. 
 
-
-
 import time
 from matplotlib import pyplot as plt
 
